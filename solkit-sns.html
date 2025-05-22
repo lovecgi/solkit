@@ -82,7 +82,8 @@
 .process-arrow-group {
     display: flex;
     align-items: center;
-    gap: 0.2rem;
+    gap: 0rem;
+    flex-direction: row-reverse;
 }
 .process-line {
     display: inline-block;
@@ -92,6 +93,7 @@
     margin-left: 0.2rem;
     margin-right: 0.2rem;
     opacity: 0.5;
+    margin-top: 0.2rem;
 }
 @media (max-width: 768px) {
     .process-container.with-lines {
@@ -120,7 +122,7 @@
         <div class="service-box-row">
             <div class="service-box">
                 <div class="service-icon-circle">
-                    <img src="images/14/icon_01.png" alt="콘텐츠 기획 아이콘">
+                    <img src="images/14/03_01.png" alt="아이콘">
                 </div>
                 <div class="service-box-content">
                     <h3>콘텐츠 기획 & 생산</h3>
@@ -133,7 +135,7 @@
             </div>
             <div class="service-box">
                 <div class="service-icon-circle">
-                    <img src="images/14/icon_02.png" alt="마케팅 연계 아이콘">
+                    <img src="images/14/03_02.png" alt="아이콘">
                 </div>
                 <div class="service-box-content">
                     <h3>마케팅 연계</h3>
@@ -146,7 +148,7 @@
             </div>
             <div class="service-box">
                 <div class="service-icon-circle">
-                    <img src="images/14/icon_03.png" alt="SEO 최적화 아이콘">
+                    <img src="images/14/03_03.png" alt="아이콘">
                 </div>
                 <div class="service-box-content">
                     <h3>SEO 최적화</h3>
@@ -158,7 +160,7 @@
             </div>
             <div class="service-box">
                 <div class="service-icon-circle">
-                    <img src="images/14/icon_04.png" alt="운영 분석 아이콘">
+                    <img src="images/14/03_04.png" alt="아이콘">
                 </div>
                 <div class="service-box-content">
                     <h3>운영 & 분석</h3>
@@ -172,8 +174,246 @@
         </div>
     </div>
 </section>
-
+<!-- 기대 효과 섹션 -->
+<section class="expected-effects-section">
+    <div class="container">
+        <div class="effects-header text-center">
+            <div class="effects-label">Expected effects</div>
+            <h2 class="effects-title">기대 효과</h2>
+            <div class="effects-keywords">
+                <span>브랜드 신뢰 상승</span>
+                <span class="dot">·</span>
+                <span>전환율 증가</span>
+                <span class="dot">·</span>
+                <span>인지도 상승</span>
+            </div>
+        </div>
+        <div class="effects-box-row">
+            <div class="effects-box">
+                <div class="effects-icon-wrap">
+                    <img src="images/14/04_01.png" alt="아이콘">
+                </div>
+                <div class="effects-box-content">
+                    <h3>브랜드 신뢰도 상승</h3>
+                    <p>지속적인 콘텐츠 업로드로 전문성과 신뢰감을 높이는 효과</p>
+                </div>
+            </div>
+            <div class="effects-box">
+                <div class="effects-icon-wrap">
+                    <img src="images/14/04_02.png" alt="아이콘">
+                </div>
+                <div class="effects-box-content">
+                    <h3>고객 유입 및 전환</h3>
+                    <p>더 많은 잠재고객 노출 → 구매, 문의, 신규 유입 등 다양한 전환 효과</p>
+                </div>
+            </div>
+            <div class="effects-box">
+                <div class="effects-icon-wrap">
+                    <img src="images/14/04_03.png" alt="아이콘">
+                </div>
+                <div class="effects-box-content">
+                    <h3>검색 노출 강화</h3>
+                    <p>SEO 최적화와 정기적인 게시물로 유입량이 증가하여 퍼블리시 트래픽 유도</p>
+                </div>
+            </div>
+            <div class="effects-box">
+                <div class="effects-icon-wrap">
+                    <img src="images/14/04_04.png" alt="아이콘">
+                </div>
+                <div class="effects-box-content">
+                    <h3>장기적 자산화</h3>
+                    <p>양질의 콘텐츠가 생성/정가되어 마케팅 비용 감소, 다양한 마케팅 채널로 재활용 가능</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- 인스타그램 관리 섹션 -->
+<section class="blog-management">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- 왼쪽 텍스트 영역 -->
+            <div class="col-lg-6">
+                <div class="blog-content">
+                    <h2 class="section-title">인스타그램 관리<br>
+                        <span class="highlight">솔킷이 해냅니다!</span>
+                    </h2>
+                </div>
+            </div>
+            
+            <!-- 오른쪽 이미지 영역 -->
+            <div class="col-lg-6">
+                <div class="blog-image">
+                    <img src="images/14/05.png" alt="인스타 관리 서비스" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 서비스 프로세스 섹션 -->
+<section class="service-process">
+    <div class="container">
+        <div class="process-flow">
+            <div class="process-container with-lines">
+                <div class="process-item">
+                    <div class="process-circle">참여유도</div>
+                </div>
+                <div class="process-arrow-group">
+                    <div class="process-arrow">≫</div>
+                    <div class="process-line"></div>
+                </div>
+                <div class="process-item">
+                    <div class="process-circle process-highlight">확실한</div>
+                </div>
+                <div class="process-arrow-group">
+                    <div class="process-arrow">≫</div>
+                    <div class="process-line"></div>
+                </div>
+                <div class="process-item">
+                    <div class="process-circle">바이럴효과</div>
+                </div>
+            </div>
+            <p class="process-description text-center">
+                콘텐츠 기획, 제작, 업로드, 해시태그 연구, 댓글/DM 응대, 팔로워 분석 등 전반적인 계정 관리를 하는 솔루션으로 브랜드 이미지 제고, 팔로워 증대, 매출 또는 문의 유도를 위한 통합 전략 제시 합니다.
+
+시각적, 감성적 콘텐츠가 중요한 SNS(인스타그램)에서
+스토리, 릴스, 라이브 등 다양한 콘텐츠 형식으로 브랜드 스토리를 생생히 전할 수 있습니다.
+
+SNS 마케팅 중에서도 높은 참여도(Engagement)와 빠른 바이럴 효과를 기대할 수 있는 솔루션 입니다.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- 주요 서비스 섹션 -->
+<section class="main-services-section">
+    <div class="container">
+        <div class="service-header text-center mb-5">
+            <div class="service-label">Service</div>
+            <h2 class="service-title">주요 서비스</h2>
+        </div>
+        <div class="service-box-row">
+            <div class="service-box">
+                <div class="service-icon-circle">
+                    <img src="images/14/03_01.png" alt="아이콘">
+                </div>
+                <div class="service-box-content">
+                    <h3>계정 운영 & 브랜딩</h3>
+                    <ul>
+                        <li>계정 컨셉 기획: 계정의 톤앤매너, 비주얼 아이덴티티, 프로필 구성</li>
+                        <li>피드 구성: 브랜드 이미지와 일관된 색감, 스타일로 피드 기획 및 디자인</li>
+                        <li>스토리 하이라이트 설정: 핵심 정보를 카테고리별로 정리해 팔로워 접근성 향상</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-icon-circle">
+                    <img src="images/14/03_02.png" alt="아이콘">
+                </div>
+                <div class="service-box-content">
+                    <h3>콘텐츠 기획 & 제작</h3>
+                    <ul>
+                        <li>이미지, 영상, 릴스(Reels) 등 시각적 매력도가 높은 콘텐츠 제작</li>
+                        <li>해시태그 연구 및 제목, 설명 문구를 통해 인사이트 있는 콘텐츠 기획</li>
+                        <li>이벤트/프로모션 등 팔로워 참여를 유도하는 다양하고 흥미로운 기획</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-icon-circle">
+                    <img src="images/14/03_03.png" alt="아이콘">
+                </div>
+                <div class="service-box-content">
+                    <h3>팔로워 소통 & 관리</h3>
+                    <ul>
+                        <li>댓글, DM 신속 대응으로 팔로워와의 친밀감 형성</li>
+                        <li>피드백 분석을 통해 브랜드 이미지 개선 및 충성도 높은 팔로워 확보</li>
+                        <li>인플루언서 및 파트너십 기회를 탐색해 협업 추진</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-icon-circle">
+                    <img src="images/14/03_04.png" alt="아이콘">
+                </div>
+                <div class="service-box-content">
+                    <h3>성과 분석 & 리포팅</h3>
+                    <ul>
+                        <li>팔로워 증감, 게시물 도달률, 노출 수, 참여도(좋아요, 댓글, 공유 수) 등</li>
+                        <li>팔로워 연령/지역/관심사 등 인사이트 보고 → 이후 콘텐츠 전략에 반영</li>
+                        <li>주기적인 리포트 제공으로 효과 측정 및 보완 계획 수립</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 기대 효과 섹션 -->
+<section class="expected-effects-section">
+    <div class="container">
+        <div class="effects-header text-center">
+            <div class="effects-label">Expected effects</div>
+            <h2 class="effects-title">기대 효과</h2>
+            <div class="effects-keywords">
+                <span>브랜드 신뢰 강화</span>
+                <span class="dot">·</span>
+                <span>커뮤니티 형성</span>
+                <span class="dot">·</span>
+                <span>시장 경쟁력 확보</span>
+            </div>
+        </div>
+        <div class="effects-box-row">
+            <div class="effects-box">
+                <div class="effects-icon-wrap">
+                    <img src="images/14/07_01.png" alt="아이콘">
+                </div>
+                <div class="effects-box-content">
+                    <h3>브랜드 인지도 강화</h3>
+                    <p>지속적인 노출과 바이럴로 새로운 잠재 고객에게 브랜드 각인</p>
+                </div>
+            </div>
+            <div class="effects-box">
+                <div class="effects-icon-wrap">
+                    <img src="images/14/07_02.png" alt="아이콘">
+                </div>
+                <div class="effects-box-content">
+                    <h3>팔로워 커뮤니티 형성</h3>
+                    <p>팬덤 형성, 충성 고객 증가 → 자연스러운 구매/서비스 이용 전환</p>
+                </div>
+            </div>
+            <div class="effects-box">
+                <div class="effects-icon-wrap">
+                    <img src="images/14/07_03.png" alt="아이콘">
+                </div>
+                <div class="effects-box-content">
+                    <h3>소통 채널 극대화</h3>
+                    <p>댓글, DM을 통한 고객 문의, 피드백을 실시간 파악해 빠른 대응이 가능</p>
+                </div>
+            </div>
+            <div class="effects-box">
+                <div class="effects-icon-wrap">
+                    <img src="images/14/07_04.png" alt="아이콘">
+                </div>
+                <div class="effects-box-content">
+                    <h3>시장 경쟁력 확보</h3>
+                    <p>경쟁사와 차별화된 계정 운영으로 차별화된 브랜딩 구축</p>
+                </div>
+            </div>
+            <div class="effects-box-none"></div>
+            <div class="effects-box">
+                <div class="effects-icon-wrap">
+                    <img src="images/14/07_05.png" alt="아이콘">
+                </div>
+                <div class="effects-box-content">
+                    <h3>영업/매출 증대</h3>
+                    <p>팔로워 증가, 도달 범위 확대 → 프로모션 유입, 웹사이트 트래픽 증가 → 실제 매출 증진</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 인스타그램 관리 섹션
 <section class="instagram-management">
     <div class="container">
         <div class="section-header text-center mb-5">
@@ -209,9 +449,9 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-<!-- 인스타그램 프로세스 섹션 -->
+<!-- 인스타그램 프로세스 섹션
 <section class="insta-process">
     <div class="container">
         <div class="process-flow">
@@ -234,9 +474,9 @@
             </p>
         </div>
     </div>
-</section>
+</section> -->
 
-<!-- 인스타그램 서비스 특징 -->
+<!-- 인스타그램 서비스 특징
 <section class="insta-features">
     <div class="container">
         <div class="text-center mb-5">
@@ -282,9 +522,9 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-<!-- 인스타그램 관리 섹션 2 -->
+<!-- 인스타그램 관리 섹션 2
 <section class="instagram-management-2">
     <div class="container">
         <div class="section-header text-center mb-5">
@@ -320,9 +560,9 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-<!-- 인스타그램 프로세스 섹션 2 -->
+<!-- 인스타그램 프로세스 섹션 2
 <section class="insta-process-2">
     <div class="container">
         <div class="process-flow">
@@ -345,9 +585,9 @@
             </p>
         </div>
     </div>
-</section>
+</section> -->
 
-<!-- 기대 효과 섹션 -->
+<!-- 기대 효과 섹션
 <section class="expected-effects-section">
     <div class="container">
         <div class="effects-header text-center">
@@ -400,9 +640,9 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-<!-- 마지막 섹션 -->
+<!-- 마지막 섹션
 <section class="final-section">
     <div class="container">
         <div class="text-center mb-5">
@@ -448,7 +688,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- 주요 서비스 섹션 스타일 -->
 <style>
@@ -598,6 +838,23 @@
 .effects-box {
     background: rgba(0,0,0,0.3);
     border: 2px solid #fff;
+    border-radius: 18px;
+    padding: 2.5rem 2rem 2rem 3.5rem;
+    min-height: 140px;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    flex: 0 0 47%;
+    max-width: 47%;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+}
+.effects-box-none {
+    background: rgba(0,0,0,0);
+    border: 0px solid #fff;
     border-radius: 18px;
     padding: 2.5rem 2rem 2rem 3.5rem;
     min-height: 140px;
