@@ -38,7 +38,7 @@
     <script>
         // 기본 페이지 로드 (메인 페이지)
         document.addEventListener('DOMContentLoaded', function() {
-            //loadContent('solkit-main.html');
+            loadContent('solkit-main.html');
             //loadContent('solkit-about.html');
             //loadContent('solkit-place.html');
             //loadContent('solkit-smartstore.html');
@@ -51,7 +51,7 @@
             //loadContent('solkit-media.html');
             //loadContent('solkit-sns.html');
             //loadContent('solkit-hospital.html');
-            loadContent('solkit-partner.html');
+            //loadContent('solkit-partner.html');
         });
         
         // 컨텐츠 로드 함수
@@ -75,8 +75,9 @@
                 });
         }
     </script>
+        
         <!-- 구글 지도 스크립트 -->
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+        <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
         <script>
             function initMap() {
                 var mapContainer = document.getElementById('naver-map');
@@ -104,6 +105,131 @@
             window.onload = function() {
                 setTimeout(initMap, 500); // 0.5초 지연을 추가하여 DOM이 완전히 로드될 시간을 줍니다
             };
+        </script>-->
+        <script>
+            // 지도 초기화 함수
+            /*function initMap() {
+                // 회사 위치 좌표 (경기도 고양시 일산동구 백마로 195, 엠시티타워)
+                const companyLocation = { lat: 37.6813, lng: 126.7707 };
+                
+                // 지도 옵션 설정
+                const mapOptions = {
+                    center: companyLocation,
+                    zoom: 16, // 적절한 확대 수준
+                    mapTypeControl: true,
+                    streetViewControl: true,
+                    fullscreenControl: true,
+                    zoomControl: true,
+                    styles: [ // 선택사항: 지도 스타일 커스터마이징
+                        {
+                            featureType: "poi.business",
+                            stylers: [{ visibility: "off" }]
+                        }
+                    ]
+                };
+                
+                // 지도 생성
+                const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                
+                // 마커 생성
+                const marker = new google.maps.Marker({
+                    position: companyLocation,
+                    map: map,
+                    title: "엠시티타워",
+                    animation: google.maps.Animation.DROP, // 마커 드롭 애니메이션
+                    icon: {
+                        url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png", // 기본 빨간 마커
+                        scaledSize: new google.maps.Size(40, 40) // 마커 크기 조정
+                    }
+                });
+                
+                // 정보창 내용
+                const infoWindowContent = `
+                    <div class="info-window">
+                        <h3>엠시티타워</h3>
+                        <p>경기도 고양시 일산동구 백마로 195</p>
+                        <p style="margin-top: 8px;">
+                            <a href="https://map.kakao.com/?q=경기도 고양시 일산동구 백마로 195" 
+                               target="_blank" 
+                               style="color: #1a73e8; text-decoration: none;">
+                                카카오맵에서 보기 →
+                            </a>
+                        </p>
+                    </div>
+                `;
+                
+                // 정보창 생성
+                const infoWindow = new google.maps.InfoWindow({
+                    content: infoWindowContent,
+                    maxWidth: 300
+                });
+                
+                // 마커 클릭 시 정보창 표시
+                marker.addListener("click", () => {
+                    infoWindow.open(map, marker);
+                });
+                
+                // 페이지 로드 시 정보창 자동 표시 (선택사항)
+                // infoWindow.open(map, marker);
+                
+                // 마커에 바운스 효과 추가 (마우스 오버 시)
+                marker.addListener("mouseover", () => {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                });
+                
+                marker.addListener("mouseout", () => {
+                    marker.setAnimation(null);
+                });
+            }
+            
+            // 지도 로드 에러 처리
+            function handleMapError() {
+                const mapDiv = document.getElementById("map");
+                mapDiv.innerHTML = `
+                    <div style="display: flex; justify-content: center; align-items: center; height: 100%; background-color: #f5f5f5;">
+                        <div style="text-align: center; padding: 20px;">
+                            <p style="color: #666; margin-bottom: 10px;">지도를 불러올 수 없습니다.</p>
+                            <p style="color: #999; font-size: 14px;">주소: 경기도 고양시 일산동구 백마로 195, 엠시티타워</p>
+                        </div>
+                    </div>
+                `;
+            }*/
+        </script>
+        
+        <!-- Google Maps API 로드
+        <script async defer 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo-6hoYNosXIs2zQ7E0LkRjdehF64VkR8&callback=initMap&language=ko"
+            onerror="handleMapError()">
+        </script> -->
+        <!-- 페이지 로드 완료 후 API 스크립트 동적 로드 -->
+        <script>
+            window.initMap = function() {
+                const mapElement = document.getElementById("map");
+                if (!mapElement) {
+                    console.error("지도 요소를 찾을 수 없습니다.");
+                    return;
+                }
+                
+                const companyLocation = { lat: 37.6813, lng: 126.7707 };
+                
+                const map = new google.maps.Map(mapElement, {
+                    center: companyLocation,
+                    zoom: 16
+                });
+                
+                const marker = new google.maps.Marker({
+                    position: companyLocation,
+                    map: map,
+                    title: "엠시티타워"
+                });
+            };
+            window.addEventListener('load', function() {
+                const script = document.createElement('script');
+                script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAo-6hoYNosXIs2zQ7E0LkRjdehF64VkR8&callback=initMap&language=ko';
+                script.async = true;
+                script.defer = true;
+                document.head.appendChild(script);
+            });
         </script>
 </body>
 </html>

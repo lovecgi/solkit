@@ -15,7 +15,7 @@ body {
     background: linear-gradient(180deg,
         #000000 0%,
         #673b8a 20%,
-        #000000 50%,
+        #000000 65%,
         #000000 100%
     );
     /*background-attachment: fixed;  스크롤 시 배경 고정 */
@@ -362,7 +362,7 @@ a {
 
 /* 히어로 섹션 스타일 개선 */
 .hero-section {
-    min-height: 85vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 120px 0;
@@ -461,8 +461,8 @@ a {
 .works-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2rem 0;
+    gap: 1rem;
+    padding: 2rem 8rem;
 }
 
 .work-card.work-card-g1{
@@ -473,6 +473,9 @@ a {
 .work-card.work-card-g2{
     grid-row: 1 / 3;
     grid-column: 2 / 3;
+}
+.work-card.work-card-g2 .work-image{
+    border-radius: 10px 10px 0px 0px;
 }
 
 .work-card.work-card-g3{
@@ -485,6 +488,10 @@ a {
     grid-column: 1 / 2;
 }
 
+.work-card.work-card-g4 .work-image{
+    border-radius: 10px 10px 0px 0px;
+}
+
 .work-card.work-card-g5{
     grid-row: 3 / 4;
     grid-column: 2 / 3;
@@ -493,6 +500,12 @@ a {
 .work-card.work-card-g6{
     grid-row: 2 / 4;
     grid-column: 3 / 4;
+    display: grid;
+    align-content: space-between;
+}
+
+.work-card.work-card-g6 .work-image{
+    border-radius: 0px 0px 10px 10px;
 }
 
 
@@ -500,7 +513,7 @@ a {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
+    border-radius: 10px;
     position: relative;
     transition: all 0.3s ease;
 }
@@ -513,7 +526,7 @@ a {
 }
 
 .work-text {
-    padding: 2rem;
+    padding: 1.2rem;
 }
 
 .work-number {
@@ -533,8 +546,8 @@ a {
 }
 
 .work-card p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.8rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
@@ -695,7 +708,7 @@ a {
     display: block;
     width: 100%;
     height: 1px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.5);
     margin: 0.8rem 0;
 }
 
@@ -718,21 +731,32 @@ a {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
 }
+.partners-section .container::after{
+    content: 'SOLKIT MARKETING';
+    font-size: 7rem;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    display: block;
+    margin-top: -4.5rem;
+    color: #271138;
+}
 
-.partners-section .container::before{
+/*.partners-section .container::before{
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    /* background: linear-gradient(135deg, rgba(106, 17, 203, 0.4) 0%, rgba(37, 117, 252, 0.4) 100%), url(/images/main_01_phone.png); */
+     background: linear-gradient(135deg, rgba(106, 17, 203, 0.4) 0%, rgba(37, 117, 252, 0.4) 100%), url(/images/main_01_phone.png);
     background: url("/images/main/main_03_ourpartners_bg_ball.png");
     background-size: 40%;
     background-position: top center;
     background-repeat: no-repeat;
     z-index: -1;
-}
+}*/
 
 .partners-section h2 {
     color: #ffffff;
@@ -777,8 +801,10 @@ a {
 .slide {
     flex: 0 0 auto;
     width: 200px;
-    padding: 0 15px;
-    opacity: 0.7;
+    padding: 1rem;
+    background: #fff;
+    margin: 8px;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 
@@ -790,7 +816,7 @@ a {
 .about-hero, .viral-hero {
     position: relative;
     height: 74vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
     background-size: cover;
     background-position: center;
     display: flex;
@@ -802,21 +828,19 @@ a {
 .about-hero .container::before{
     content: '';
     position: absolute;
-    top: 8rem;
-    left: 2%;
-    right: 2%;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
     background: url('images/about/about_01_img.png');
       background-position-x: 0%;
       background-position-y: 0%;
       background-repeat: repeat;
       background-size: auto;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
     z-index: -1;
-    margin: 4rem;
-    border: 1px solid;
 }
 
 .viral-hero .container::before{
@@ -889,7 +913,7 @@ a {
   margin-bottom: 15vh;
 }
 
-.about-section::before{
+/*.about-section::before{
     content: "";
     background: url('images/about/bg_wave.svg');
     background-size: auto;
@@ -900,7 +924,7 @@ a {
     right: 0px;
     bottom: 0px;
     z-index: 1;
-}
+}*/
 
 .about-section h2{
     font-size: 2.8rem;
@@ -916,7 +940,8 @@ a {
 
 .feature-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-start;
     gap: 2rem;
     padding: 12rem 12rem 4rem 12rem;
     /*background: rgba(255, 255, 255, 0.05);
@@ -926,7 +951,7 @@ a {
 }
 
 .feature-item:hover {
-    background: rgba(255, 255, 255, 0.1);
+    /*background: rgba(255, 255, 255, 0.1);*/
 }
 
 .feature-icon {
@@ -934,15 +959,15 @@ a {
 }
 
 .feature-icon img {
-    width: 100%;
+    width: 50%;
     height: auto;
     filter: brightness(0) invert(1);
     opacity: 0.9;
 }
 
-.feature-content {
+/*.feature-content {
     flex: 1;
-}
+}*/
 
 .feature-item-02 {
     display: flex;
@@ -3717,7 +3742,7 @@ a {
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .icon-img {
@@ -3753,9 +3778,9 @@ a {
     margin-right: 1.5rem;
 }
 
-.feature-content {
+/*.feature-content {
     flex: 1;
-}
+}*/
 
 .feature-content h4 {
     font-size: 1.3rem;
