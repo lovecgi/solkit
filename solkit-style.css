@@ -7,6 +7,7 @@
     
     /* 기본 폰트 설정 */
     --bs-body-font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --bs-navbar-toggler-icon-bg2: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28225, 225, 225, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 body {
@@ -157,6 +158,18 @@ body {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+.dropdown-item.active, .dropdown-item:active{
+    background-color: transparent;
+}
+
+.navbar-toggler-icon{
+    /*filter: opacity(1) drop-shadow(0 0 0 #ffffff);*/
+    background-image: var(--bs-navbar-toggler-icon-bg2);
+}
+.navbar-toggler{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
 /* 푸터 스타일 */
 .footer {
     background: rgba(0, 0, 0, 0.3);
@@ -169,29 +182,37 @@ body {
 .footer-top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 1rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .footer-logo img {
     height: 30px;
+    width: auto;
 }
 
-/* 소셜 링크 */
 .social-links {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .social-link {
-    color: rgba(255, 255, 255, 0.7);
+    color: #fff;
     font-size: 1.2rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .social-link:hover {
-    color: white;
+    color: #a259ff;
 }
 
 /* 회사 정보 */
@@ -294,6 +315,7 @@ a {
     .nav-right-items {
         margin-top: 1rem;
         justify-content: center;
+        display: none !important;
     }
 }
 
@@ -431,6 +453,10 @@ a {
     table-layout: fixed;
     text-align: center;
     width: 100%;
+}
+.hero-section .hero-card .glass-card{
+    width: 630px;
+    height: 300px;
 }
 
 .glass-card > h1 {
@@ -841,6 +867,7 @@ a {
     background-position: center top;
     background-repeat: no-repeat;
     z-index: -1;
+    opacity: 0.5;
 }
 
 .viral-hero .container::before{
@@ -867,7 +894,7 @@ a {
     padding: 2rem;
 }
 .about-hero .hero-content{
-    margin-top: 8rem;
+    /*ssadmargin-top: 8rem;*/
 }
 .hero-text {
     color: white;
@@ -878,7 +905,8 @@ a {
 }
 
 .hero-text .highlight {
-    color: var(--primary-purple);
+    /*color: var(--primary-purple);*/
+    color: #d9aefd;
     font-weight: 700;
     font-size: 2.7rem;
 }
@@ -887,7 +915,7 @@ a {
 .about-section {
     padding: 5rem 0;
     /*background: linear-gradient(180deg, #2b1055 0%, #1a0838 100%);*/
-    background: url('images/about/bg_firefly_effect.svg'), linear-gradient(to bottom, #4f2d69, #030929);;
+    background: linear-gradient(to bottom, #4f2d69, #030929);;
     background-size: 100%;
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -906,7 +934,7 @@ a {
   background: url('images/about/about_01_animation.png');
   background-size: contain;
   background-position: center top;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   z-index: 1;
   display: block;
   height: 14vh;
@@ -941,7 +969,7 @@ a {
 .feature-item {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 2rem;
     padding: 12rem 12rem 4rem 12rem;
     /*background: rgba(255, 255, 255, 0.05);
@@ -959,7 +987,7 @@ a {
 }
 
 .feature-icon img {
-    width: 50%;
+    width: 33%;
     height: auto;
     filter: brightness(0) invert(1);
     opacity: 0.9;
@@ -5259,3 +5287,133 @@ a {
       max-height: 20px;
     }
   }
+
+
+.about-section .feature-content{
+    min-width: 360px;
+}
+
+.about-section .feature-icon {
+    flex: 0 0 360px;
+}
+
+
+@media (max-width: 1200px) {
+    .hero-section .hero-item2 h1{
+        font-size: 3.0rem;
+        padding-left: 0;
+        text-align: center;
+    }
+    .hero-section .container::before{
+        background-position: left 110% top -10%;
+    }
+    .hero-section::before{
+        background-size: 100%;
+    }
+    .hero-section .hero-item2 p{
+        padding-left: 0;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    .hero-section .glass-card > h1{
+        font-size: 2.4rem;
+    }
+    .hero-section .glass-card{
+        min-height: 179px;
+        width: 94%;
+        margin: auto;
+    }
+    .hero-section .hero-card .glass-card{
+        width: 94%;
+        height: 179px;
+    }
+    .works-grid{
+        padding: 2rem 1rem;
+    }
+
+    .about-section .feature-content{
+        text-align: center;
+    }
+    .about-section .feature-icon {
+        flex: 0 0 126px;
+    }
+    .feature-icon img {
+        width: 100%;
+        height: auto;
+        filter: brightness(0) invert(1);
+        opacity: 0.9;
+    }
+}
+
+.text-mov{ display: none !important;}
+
+
+@media (max-width: 992px) {
+    .hero-section .hero-card .glass-card{
+        margin-top: 12rem;
+    }
+    .hero-section .hero-item2 h1{
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    .about-hero .hero-content{
+        padding: 0;
+    }
+    .about-hero h3{
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    .about-hero p{
+        font-size: 1.1rem;
+    }
+    .about-section h2{
+        font-size: 2rem;
+    }
+    .about-section p{
+        font-size: 0.9rem;
+    }
+    .hero-text .highlight{
+        font-size: unset;
+    }
+    .works-section .section-title{
+        margin-top: 4rem;
+    }
+    .contact-section h2{
+        font-size: 2rem;
+    }
+    .text-mov{ display: block !important;}
+    .text-pcv{ display: none !important;}
+    .glass-card .text-mov{ display: table-cell !important;}
+    .partners-section .container::after{
+        font-size: 2.4rem;
+        margin-top: -2.5rem;
+    }
+    .slide{
+        width: 160px;
+    }
+    .slide img{
+        width: 100%;
+    }
+}
+
+/* CSS */
+/* 모바일에서만 줄바꿈 */
+.mobile-only {
+    display: none;
+}
+
+/* PC에서만 줄바꿈 */
+.pc-only {
+    display: block;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
+    .pc-only {
+        display: none;
+    }
+}

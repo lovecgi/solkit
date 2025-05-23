@@ -6,7 +6,7 @@
             <div class="col-lg-6">
                 <div class="hero-card">
                     <div class="glass-card">
-                        <h1>IMC MARKETING</h1>
+                        <h1>IMC<br class="mobile-only"> MARKETING</h1>
                     </div>
                 </div>
             </div>
@@ -16,8 +16,8 @@
                     솔루션 SOLKIT
                 </h1>
                 <p class="lead mb-4">
-                    브랜드의 본질을 이해하고, 유기적으로 연계된 채널 전략을 통해<br>
-                    최적의 효율과 합리성을 갖춘 통합 디지털 솔루션을 제공합니다
+                    브랜드의 본질을 이해하고,<br class="mobile-only"> 유기적으로 연계된 채널 전략을 통해<br>
+                    최적의 효율과 합리성을 갖춘<br class="mobile-only"> 통합 디지털 솔루션을 제공합니다
                 </p>
             </div>
         </div>
@@ -121,7 +121,7 @@
 <section class="partners-section py-5">
     <div class="container">
         <h2 class="text-center mb-3" style="margin-top: 50px;">OUR PARTNERS</h2>
-        <p class="text-center text-white-50 mb-5">많은 고객들이 우리와 함께 매출 성장을 이루고 있습니다.</p>
+        <p class="text-center text-white-50 mb-5">많은 고객들이 우리와 함께<br class="mobile-only"> 매출 성장을 이루고 있습니다.</p>
         <div class="partner-slider">
             <div class="slider-track">
                 <!-- 첫번째 그룹 -->
@@ -155,6 +155,48 @@
                 <div class="slide">
                     <img src="images/main_03_ourpartners_10.png" alt="파트너 10">
                 </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_11.png" alt="파트너 11">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_12.png" alt="파트너 12">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_13.png" alt="파트너 13">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_14.png" alt="파트너 14">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_15.png" alt="파트너 15">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_16.png" alt="파트너 16">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_17.png" alt="파트너 17">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_18.png" alt="파트너 18">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_19.png" alt="파트너 19">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_20.png" alt="파트너 20">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_21.png" alt="파트너 21">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_22.png" alt="파트너 22">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_23.png" alt="파트너 23">
+                </div>
+                <div class="slide">
+                    <img src="images/main_03_ourpartners_24.png" alt="파트너 24">
+                </div>
             </div>
         </div>
     </div>
@@ -166,7 +208,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <h2 class="mb-4">지금 바로 문의하세요<br>어떤 점이 궁금하신가요?</h2>
-                <p class="mb-4">마케팅 고민, 솔킥하게해결해드립니다</p>
+                <p class="mb-4">마케팅 고민, 솔깃하게 해결해드립니다</p>
                 
                 <!-- 연락처 정보 -->
                 <!--<i class="bi bi-envelope-fill me-2"></i>-->
@@ -188,7 +230,7 @@
             <!-- 문의 폼 -->
             <div class="col-lg-6">
                 <div class="contact-form-container">
-                    <form class="contact-form">
+                    <form class="contact-form" id="contactForm">
                         <div class="mb-3">
                             <input type="text" class="form-control" placeholder="*성함" required>
                         </div>
@@ -261,3 +303,39 @@
         </div>
     </div>
 </section>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // 폼 데이터 수집
+    const name = document.querySelector('input[placeholder="*성함"]').value;
+    const company = document.querySelector('input[placeholder="*회사명"]').value;
+    const phone = document.querySelector('input[placeholder="*연락처"]').value;
+    const message = document.querySelector('textarea').value;
+    
+    // 선택된 서비스 수집
+    const services = [];
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(#privacyCheck)');
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            services.push(checkbox.nextElementSibling.textContent.trim());
+        }
+    });
+
+    // 이메일 본문 구성
+    const emailBody = `
+        이름: ${name}
+        회사명: ${company}
+        연락처: ${phone}
+        문의내용: ${message}
+        선택한 서비스: ${services.join(', ')}
+    `;
+
+    // mailto 링크 생성
+    const mailtoLink = `mailto:cs@solkit.kr?subject=문의하기: ${company}&body=${encodeURIComponent(emailBody)}`;
+    
+    // 이메일 클라이언트 열기
+    window.location.href = mailtoLink;
+});
+</script>

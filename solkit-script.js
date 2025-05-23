@@ -131,6 +131,10 @@ function setupNavigation() {
                         }
                     }, 500);
                 }*/
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'instant'
+                });
                 
                 // 모바일에서 메뉴 닫기
                 const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -155,7 +159,7 @@ function setupPartnerSlider() {
     if (existingClones.length > 0) return;
     
     // 처음 10개 슬라이드만 복제 (또는 가능한 만큼)
-    for(let i = 0; i < Math.min(10, slides.length); i++) {
+    for(let i = 0; i < Math.min(25, slides.length); i++) {
         const clone = slides[i].cloneNode(true);
         clone.classList.add('slide-clone');
         sliderTrack.appendChild(clone);
